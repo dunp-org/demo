@@ -1,6 +1,6 @@
 # dunp protocol demo
 
-Demo app on IPFS: https://ipfs.io/ipfs/Qmc5oGdvJiUuEvX6HLy3S5B79pgjqMUobvi7LKbmYj7h4U/
+Demo app on IPFS: https://ipfs.io/ipfs/QmX9zfNvVRAZ6Ngn5Vrz88EtwnZ6JBMbjTMR2KMV4wdUdo/
 
 Based on [Bootstrap Framework](http://getbootstrap.com/) version 4 and uses [Webpack](https://webpack.js.org/) as a flexible and modern module bundler. All common features for front-end projects (like SCSS compilation, minifying of Assets, etc.) are included out of the box.
 

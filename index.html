@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Bootstrap 4 &amp; WebPack Boilerplate</title>
+
+    <link rel="stylesheet" href="dist/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="nav-main navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">dunp</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navigation"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#feed">Feed</a></li>
+          </ul>
+        </div>
+      </div>  <!-- /container -->
+    </nav>
+
+    <div class="container">
+
+      <!-- IPFS NODE -->
+
+      <section id="ipfs-node">
+        <h3>IPFS</h3>
+
+        <div class="form-group">
+          <label for="node">Node</label> <input type="text" class="form-control" id="node" placeholder="Node ID" disabled />
+        </div>
+
+        <!-- DID-TAB-PANEL -->
+
+        <article id="did-tabs-panel">
+          <h3>Decentralized IDentity (DID)</h3>
+
+          <ul class="nav nav-tabs" id="did-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="easy-tab"
+                data-toggle="tab"
+                href="#easy"
+                role="tab"
+                aria-controls="easy"
+                aria-selected="true"
+                >Easy Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="web3-tab"
+                data-toggle="tab"
+                href="#web3"
+                role="tab"
+                aria-controls="web3"
+                aria-selected="false"
+                >Wallet (Metamask)</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="easy" role="tabpanel" aria-labelledby="easy-tab">
+              <form name="loginform">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="username" placeholder="Username" value="prc" />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="password" placeholder="Password" value="test" />
+                </div>
+                <button type="submit" class="btn btn-primary" id="login">Login</button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="web3" role="tabpanel" aria-labelledby="web3-tab">
+              <form name="walletform">
+                <button type="submit" class="btn btn-primary" id="connect">Connect Wallet</button>
+              </form>
+            </div>
+          </div>
+        </article>
+
+        <!-- DID Address -->
+
+        <article id="did-address">
+          <div class="form-group">
+            <label for="did">DID Address</label> <input type="text" class="form-control" id="did" placeholder="Ethereum Address" disabled />
+          </div>
+          <form name="logoutform">
+            <button type="submit" class="btn btn-primary" id="logout" disabled>Logout</button>
+          </form>
+        </article>
+      </section>
+
+      <!-- PROFILE -->
+
+      <section id="profile">
+        <h3>Profile</h3>
+
+        <label id="profile-action">View profile</label>
+
+        <div class="row">
+          <div class="col-3 text-center">
+            <img id="avatar" src="https://azcast.arizona.edu/sites/default/files/profile-blank.png" />
+          </div>
+          <div class="col-9">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" placeholder="Name" disabled />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="bio" placeholder="Bio" disabled />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="location" placeholder="Location" disabled />
+            </div>
+            <form name="profileform">
+              <button type="submit" class="btn btn-primary" id="saveprofile" disabled>Save</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEED -->
+
+      <section id="feed">
+        <h3>Feed</h3>
+
+        <article id="postform" style="display: none">
+          <label id="post-action">Post update</label>
+
+          <div class="form-group">
+            <textarea class="form-control" id="message" placeholder="What do you want to share with the web3 world?" rows="3"></textarea>
+          </div>
+          <form name="postform">
+            <button type="submit" class="btn btn-primary" id="post">Post</button>
+          </form>
+        </article>
+
+        <article id="feed">
+          <label id="post-action">Recent posts</label>
+
+          <ul id="posts" class="list-group list-group-dividered list-group-full">
+
+            <span class="light-small">no posts yet...</span>
+
+          </ul>
+        </article>
+      </section>
+
+      <!-- JUMBOTRON
+
+      <section id="jumbotron">
+        <div class="jumbotron">
+          <h1>Hello, world!</h1>
+          <p>
+            This is a jumbotron example, that is used for many websites today and shows that Bootstrap is successfully
+            loadedd, using all components. Bootstrap feature will help you to create the desired layouts.
+          </p>
+          <p>
+            <a
+              class="btn btn-primary btn-lg"
+              href="https://getbootstrap.com/docs/4.1/components/jumbotron/"
+              role="button"
+              >Learn more
+            </a>
+          </p>
+        </div>
+      </section> -->
+
+      <!-- BLOCKQUOTE
+
+      <blockquote class="blockquote" id="blockquote">
+        <p class="mb-0">
+          Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.
+        </p>
+        <footer class="blockquote-footer">Thomas Edison</footer>
+      </blockquote> -->
+
+      <!-- PROGRESS BARS
+
+      <section id="progress-bars">
+        <h3>Progress Bars</h3>
+
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            role="progressbar"
+            style="width: 25%"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar bg-info"
+            role="progressbar"
+            style="width: 50%"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar bg-warning progress-bar-striped"
+            role="progressbar"
+            style="width: 75%"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="progress">
+          <div
+            class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </section> -->
+
+      <!-- CONTACT FORM
+
+      <section id="contact-form">
+        <h3>Contact Form</h3>
+
+        <form name="contactform" action="mailto:spam@dominik-hanke.de" method="post">
+          <div class="form-group">
+            <label for="name">Name</label> <input type="text" class="form-control" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Your email" />
+          </div>
+          <div class="form-group">
+            <label for="email">Message</label> <textarea class="form-control" id="message" rows="6"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default">Send email</button>
+        </form>
+      </section> -->
+
+      <!-- DROP-UP
+
+      <section id="drop-up-split">
+        <h3>DropUp Split Button</h3>
+
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-outline-secondary">Main Action</button>
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- TAB-PANEL
+
+      <section id="tab-panel">
+        <h3>Tab Panel</h3>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="home-tab"
+              data-toggle="tab"
+              href="#home"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="profile-tab"
+              data-toggle="tab"
+              href="#projects"
+              role="tab"
+              aria-controls="projects"
+              aria-selected="false"
+              >Projects</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <p>This is a nice text about me...</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="project-tab">
+            <p>These are my projects...</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- ALERTS
+
+      <section id="dismissable-alerts">
+        <h3>Dismissable Alerts</h3>
+
+        <div class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>Success!</strong> Your updates have been saved.
+        </div>
+
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>Error:</strong> Please fill in all required fields.
+        </div>
+      </section> -->
+
+    </div> <!-- /container -->
+
+    <script src="dist/main.bundle.js"></script>
+  </body>
+</html>

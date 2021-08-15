@@ -1,0 +1,51 @@
+{
+  "name": "dunp-test",
+  "version": "0.0.1",
+  "description": "dunp test",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "start": "webpack serve --mode development"
+  },
+  "author": "prc",
+  "license": "MIT",
+  "dependencies": {
+    "@dunp/data": "0.0.1",
+    "@dunp/identity": "0.0.1",
+    "bootstrap": "^4.5",
+    "date-fns": "^2.23.0",
+    "ipfs": "^0.55.2",
+    "jquery": "^3.5.1",
+    "nanoid": "^3.1.25",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "assert": "^2.0.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^4.2.2",
+    "dotenv-webpack": "^2.0.0",
+    "exports-loader": "^1.1.0",
+    "fast-glob": "^3.2.4",
+    "lodash": "^4.17.20",
+    "mime-types": "^2.1.27",
+    "mini-css-extract-plugin": "^0.10.0",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "postcss-loader": "^3.0.0",
+    "process": "^0.11.10",
+    "sass-loader": "^10.0.1",
+    "sharp": "^0.26.0",
+    "stream-browserify": "^3.0.0",
+    "tar": "^6.0.5",
+    "trash": "^6.1.1",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
